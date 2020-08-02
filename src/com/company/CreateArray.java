@@ -40,9 +40,9 @@ public class CreateArray {
         for (int j = 1; j < n; j++) {
             int key = numberArray[j];
             int i = j-1;
-            while ( (i > -1) && ( numberArray [i] > key ) ) {
+            for (;( i > -1 )&& ( numberArray [i] < key );i-- ) {
                 numberArray [i+1] = numberArray [i];
-                i--;
+//                i--;
             }
             numberArray[i+1] = key;
         }
